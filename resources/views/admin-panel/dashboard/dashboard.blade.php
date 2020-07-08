@@ -59,7 +59,7 @@
 					{{ $errors->has('post_file') ? $errors->first('post_file'):'' }}
 					</span>
 					<input type="file" id="post_file" accept="*" name="post_file" class="form-control">
-					The file must be a file of type: png, jpg, mp4, mov, ogg.
+					The file must be a file of type: jpeg, png, jpg, mp4, mov, ogg & less than 2 mega byte
 					<br/>
 					<label></label><br/>
 			    	<label for="post_status">Published</label>
