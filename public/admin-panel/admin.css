@@ -1,0 +1,15 @@
+.header-border{
+	background: #EAEAEA;
+	height: 100px;
+}
+.heading{
+	margin-top: 35px;
+}
+#video-item{
+	height: 500px;
+	width: 100px;
+	border-right: 2px #EAEAEA solid;
+}
+#item-box{
+	margin-top: 30px;
+}

@@ -1,0 +1,25 @@
+.header-border{
+	background: #EAEAEA;
+	height: 100px;
+}
+.heading{
+	margin-top: 35px;
+}
+.detail-item{
+	border: 3px #EAEAEA solid;
+	height: 200px;
+	width: 400px;
+	margin-top: 25px;
+}
+.breif{
+	margin-top: 35px;
+	height: 150px;
+}
+.body-item{
+	height: 400px;
+	width: 400px;
+}
+.share-option{
+	height: 100px;
+	width: 400px;
+}
