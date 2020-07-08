@@ -41,7 +41,7 @@
 					<input type="text" id="post_content" name="post_content" class="form-control"><br/>
 					<label for="post_description">Post Body(Long description)*</label>
 					<span style="color: red;margin-left: 30px;">
-					{{ $errors->has('post_title') ? $errors->first('post_title'):'' }}
+					{{ $errors->has('post_description') ? $errors->first('post_description'):'' }}
 					</span>
 					<input type="text" id="post_description" name="post_description" class="form-control"><br/>
 					<label for="post_type">Post Type*</label>

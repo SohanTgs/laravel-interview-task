@@ -14,7 +14,7 @@ class Create extends Controller
       'post_content'=>'required',
       'post_description'=>'required',
       'post_type'=>'required',
-      'post_file'=>'required|file|mimes:png,jpg,mp4,mov,ogg|max:20000',
+      'post_file'=>'required|file|mimes:jpeg,jpg,png,mp4,mov,ogg|max:20000',
       'post_status'=>'required'
     ]);
       $file = $request->file('post_file');
