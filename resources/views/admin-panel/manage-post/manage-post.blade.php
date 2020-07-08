@@ -9,7 +9,7 @@
 <body>
 	<div class="container">
 		<h3 align="center" style="margin-top:35px;">Manage all posts</h3><br/>
-		<h4 align="center" style="color:red;">{{ Session::get('message') }}</h4>
+		<h4 align="center" style="color:green;">{{ Session::get('message') }}</h4>
 		<a href="{{ url('/home') }}" class="btn btn-success">Dashboard</a>
 		<a href="{{ url('/') }}" class="btn btn-success">Home Page</a>
 		<table class="table table-hover table-border table-stripped" style="margin-top: 40px;">

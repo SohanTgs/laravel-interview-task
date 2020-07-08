@@ -10,12 +10,12 @@ class Create extends Controller
 {
     public function index(Request $request){
      $this->validate($request,[
-      'post_title'=>'required|unique:posts',
+      'post_title'=>'required|unique:posts|max:255',
       'post_content'=>'required',
       'post_description'=>'required',
       'post_type'=>'required',
-      'post_file'=>'required',
-      'post_status'=>'required',
+      'post_file'=>'required|file|mimes:png,jpg,mp4,mov,ogg|max:20000',
+      'post_status'=>'required'
     ]);
       $file = $request->file('post_file');
       $File_Name = $file->getClientOriginalName();

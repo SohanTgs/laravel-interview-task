@@ -53,6 +53,10 @@ Route::get('/delete_post/{id}',[
 
 });
 
+Route::get('/task-directions',[
+	'uses'=>'Homepage@task_directions',
+	'as'=>'task_directions'
+]);
 
 Route::get('/detail/{id}', 'Details@index')->name('detail-page');
 

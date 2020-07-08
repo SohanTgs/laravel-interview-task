@@ -12,6 +12,7 @@
 		<h3>Landing Page:</h3>
 			<div class="header-border">
 				<a href="{{ url('login') }}" class="btn btn-success">Login</a>
+				<a href="{{ route('task_directions') }}" target="_blank" class="btn btn-success">Task-directions</a>
 			</div>
 		</div><i class="fa-fa-trash"></i>
 		<div class="row">

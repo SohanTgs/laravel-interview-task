@@ -16,8 +16,12 @@ class Homepage extends Controller
 		$post_image = Post::where('post_type','image')
 		->where('post_status','Published')
     	->get();
-    	
     	return view('front-site.homepage.homepage',['post_video'=>$post_video,'post_image'=>$post_image]);
     }
+
+    public function task_directions(){
+        return view('front-site.task.task');
+    } 
+
     
 }
