@@ -9,7 +9,7 @@
 <body>
 <div class="container">
 		<div class="heading">
-		<h3>Admin Panel:</h3>
+		<h3>Admin Panel:</h3><b><i>{{ Auth::user()->name }}</i></b>
 			<div class="header-border">
 				<a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
