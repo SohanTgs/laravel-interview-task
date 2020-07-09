@@ -26,7 +26,7 @@
 <div class="container" id="item-box">
 		<div class="row">
 			<div class="col-md-6" id="image-item">
-				<h4>Post a new content here.......<span style="color:green;font-size:30px;font-style:italic;">{{ Session::get('message') }}</span></h4><br/>
+				<h4>Post a new content here.......<span style="color:green;font-size:25px;font-style:italic;">{{ Session::get('message') }}</span></h4><br/>
 		<form action="{{ route('save_new_post') }}" method="POST" enctype="multipart/form-data">
 						 @csrf
 					<label for="post_title">Post Title*</label>
