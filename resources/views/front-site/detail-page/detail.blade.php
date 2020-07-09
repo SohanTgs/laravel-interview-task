@@ -17,7 +17,7 @@
 					<div class="col-md-4">
 						<h5 class="heading">{{ $video_post->post_title }}</h5>
 						<div class="detail-item">
-							<video height="200" width="400" controls="true" preload="auto" autoplay="true">
+							<video height="200" width="400" controls="true" autoplay="true">
 								<source src="{{ asset($video_post->post_file) }}">
 							</video>
 						</div>
