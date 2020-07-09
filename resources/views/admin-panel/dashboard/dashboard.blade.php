@@ -20,7 +20,7 @@
 			<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                    @csrf
             </form>
-			</div>
+
 		</div><br/><a href="{{ route('manage_details') }}" class="btn btn-success">Go to manage</a>
 				  <a href="{{ url('/') }}" class="btn btn-success">Home Page</a>
 <div class="container" id="item-box">
