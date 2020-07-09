@@ -24,11 +24,13 @@ Route::get('/',[
 	'as'>'index'
 ]);
 
-Route::group(['middleware' => ['Redirect']], function () {
+		//start middleware syntax
 
-Route::POST('home/save-new-post',[
-	'uses'=>'Create@index',
-	'as'=>'save_new_post'
+Route::group(['middleware' => ['Redirect']], function () { 
+
+Route::POST('home/create-new-post',[
+	'uses'=>'Create@create_new_post',
+	'as'=>'create_new_post'
 ]);
 
 Route::get('home/manage-details',[
@@ -52,13 +54,17 @@ Route::get('/delete_post/{id}',[
 ]);
 
 });
+		// end middleware syntax
 
 Route::get('/task-directions',[
 	'uses'=>'Homepage@task_directions',
 	'as'=>'task_directions'
 ]);
 
-Route::get('/detail/{id}', 'Details@index')->name('detail-page');
+Route::get('/detail/{id}',[
+	'uses'=>'Details@detail',
+	'as'=>'detail'
+]);
 
 Auth::routes();
 

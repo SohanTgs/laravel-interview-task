@@ -1,33 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Laravel Test</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="{{ asset('/') }}/admin-panel/admin.css">
-</head>
-<body>
+@extends('master.master')
+
+@section('body')
 <div class="container">
-		<div class="heading">
-		<h3>Admin Panel:</h3><b><i>{{ Auth::user()->name }}</i></b>
+			<div class="heading">
+			<h3>Admin Panel:</h3><b><i>{{ Auth::user()->name }}</i></b>
 			<div class="header-border">
 				<a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
                  <h4 align="center" style="color:black;">Log Out...</h4>    
                 </a>
-
 			<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                    @csrf
             </form>
-
-		</div><br/><a href="{{ route('manage_details') }}" class="btn btn-success">Go to manage</a>
+			</div><br/><a href="{{ route('manage_details') }}" class="btn btn-success">Go to manage</a>
 				  <a href="{{ url('/') }}" class="btn btn-success">Home Page</a>
-<div class="container" id="item-box">
-		<div class="row">
+			<div class="container" id="item-box">
+		    <div class="row">
 			<div class="col-md-6" id="image-item">
-				<h4>Post a new content here.......<span style="color:green;font-size:25px;font-style:italic;">{{ Session::get('message') }}</span></h4><br/>
-		<form action="{{ route('save_new_post') }}" method="POST" enctype="multipart/form-data">
+				<h4>Post a new content here.......<span style="color:green;font-size:22px;font-style:italic;">{{ Session::get('message') }}</span></h4><br/>
+			<form action="{{ route('create_new_post') }}" method="POST" enctype="multipart/form-data">
 						 @csrf
 					<label for="post_title">Post Title*</label>
 					<span style="color: red;margin-left: 30px;">
@@ -67,12 +59,11 @@
 			    	<label for="post_status">Unpublished</label>
 			    	<input type="radio" name="post_status" id="post_status" value="Unpublished"><br/><br/>
 					<input type="submit" name="btn" class="btn btn-success" value="Submit">
-		</form>
+			</form>
 				<br/><br/>
 			</div>
-		</div>
+			</div>
 </div>
-
-</div>		
-</body>
-</html>
+</div>
+@endsection('body')
+		

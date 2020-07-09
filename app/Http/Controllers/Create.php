@@ -8,7 +8,7 @@ use App\Post;
 
 class Create extends Controller
 {
-    public function index(Request $request){
+    public function create_new_post(Request $request){
      $this->validate($request,[
       'post_title'=>'required|unique:posts|max:255',
       'post_content'=>'required',

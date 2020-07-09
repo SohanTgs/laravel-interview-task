@@ -1,0 +1,22 @@
+.header-border{
+	background: #EAEAEA;
+	height: 100px;
+}
+.heading{
+	margin-top: 35px;
+}
+.brief{
+	width: 400px;
+}
+ul{
+	list-style-type: none;
+}
+li{
+	float: left;
+}li{
+	display: block;
+	text-align: center;
+	padding: 10px;
+	font-size: 34px;
+	text-decoration: none;
+}

@@ -8,15 +8,10 @@ use App\Post;
 class Details extends Controller
 {
 
-     public function index($id){
-     	$type = Post::find($id)->post_type;
-  		$image_post = Post::find($id);
-  		$video_post = Post::find($id);
-    	return view('front-site.detail-page.detail',[
-    		'image_post'=>$image_post,
-    		'type'=>$type,
-    		'video_post'=>$video_post
-    	]);
+     public function detail($id){
+     	$post = Post::where(['id'=>$id,'post_status'=>'Published'])->first();
+     
+    	return view('front-site.detail-page.detail',['post'=>$post]);
     }
   
     public function manage_details(){
